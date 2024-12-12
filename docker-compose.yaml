@@ -1,28 +1,27 @@
 version: '3.8'
 
 services:
-#  database:
-#    image: mysql:8.0
-#    ports:
-#      - "3306:3306"
-#    environment:
-#      MYSQL_ROOT_PASSWORD: Ilovestreadian123@
-#      MYSQL_DATABASE: streadian_car
-#    volumes:
-#      - db_data:/var/lib/mysql
+  database:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Ilovestreadian123@
+      MYSQL_DATABASE: streadian_car
+    volumes:
+      - db_data:/var/lib/mysql
 
   app:
     build: .
     ports:
       - "8080:8080"
-#    depends_on:
-#      - database
+    depends_on:
+      - database
     environment:
-#      - DB_HOST=database
-      - DB_HOST=localhost
+      - DB_HOST=database
       - DB_PORT=3306
       - DB_USER=root
-      - DB_PASSWORD=root
+      - DB_PASSWORD=Ilovestreadian123@
       - DB_NAME=streadian_car
       - DATABASE_RETRY=5
       - DATABASE_RETRY_DELAY=5
