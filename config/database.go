@@ -12,7 +12,7 @@ var DB *gorm.DB
 func ConnectDB() {
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		"root",
-		"root",
+		"Ilovestreadian123@",
 		"127.0.0.1",
 		"3306",
 		"streadian_car",
